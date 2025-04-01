@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .flex-item {
+            background-color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .flex-item {
+                width: 80%;
+                margin-bottom: 10px;
+            }
+
+            nav ul{
+              flex-direction: column;
+              align-items: flex-start;
+            }
+
+            nav li{
+              margin-right: 0;
+              margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Responsive Layout Example</h1>
+
+        <div class="grid-container">
+            <div class="grid-item">Movies</div>
+            <div class="grid-item">Tv Shows</div>
+            <div class="grid-item">Directors</div>
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-item">Sci-Fi</div>
+            <div class="flex-item">Horror</div>
+            <div class="flex-item">Rom-com</div>
+        </div>
+    </div>
+
+</body>
+</html>
